@@ -11,7 +11,7 @@ set (rpi_gamepad_driver_VERSION_MINOR 0)
 # Include inclueds dir
 include_directories(src)
 
-file(GLOB SOURCES "src/*.cpp")
+file(GLOB SOURCES "src/*.c")
 add_executable (rpi_gamepad_driver ${SOURCES})
 #add_library(rpigamepad  SHARED ${SOURCES})
 #add_library(rpigamepad  STATIC ${SOURCES})
@@ -25,6 +25,5 @@ add_executable (rpi_gamepad_driver ${SOURCES})
 # set ( PROJECT_LINK_LIBS libtestStudent.a )
 # link_directories( path for the static libraries )
 
-# Usato per il make install
+# Used when installing
 install (TARGETS rpi_gamepad_driver DESTINATION bin)
-
